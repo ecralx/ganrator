@@ -4,7 +4,13 @@ Autre possibilité : Etude du dataset [CelebA](http://mmlab.ie.cuhk.edu.hk/proje
  
 ## Installation
 
-Il faut installer d'abord PyTorch. Toutes les informations sont tirées du [site officiel de PyTorch](https://pytorch.org/get-started/locally/)
+Deux dépendances sont `matplotlib` et `ipython`
+
+```
+pip install matplotlib ipython
+```
+
+Il faut aussi installer PyTorch. Toutes les informations sont tirées du [site officiel de PyTorch](https://pytorch.org/get-started/locally/)
 
 ### Avec pip
 
