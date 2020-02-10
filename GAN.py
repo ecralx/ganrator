@@ -201,12 +201,12 @@ class DCGan():
             fake = self.netG(self.fixed_noise).detach().cpu()
           # img_list.append(vutils.make_grid(fake, padding=2, normalize=True))
           vutils.save_image(fake,
-            f'output/fake_samples_epoch_{epoch}.png',
+            f'output/fake_samples_epoch_{epoch + 1}.png',
             normalize=True)
 
         iters += 1
       # do checkpointing
-      if epoch % 5 == 0:
+      if (epoch % 5 == 0) or (epoch == self.num_epochs-1):
         torch.save(self.netG, f'output/netG_epoch_{epoch + 1}.pth')
         torch.save(self.netD, f'output/netD_epoch_{epoch + 1}.pth')
     
