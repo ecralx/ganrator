@@ -2,7 +2,43 @@
 Etude du [dataset MNIST Fashion de Zalando]((https://github.com/zalandoresearch/fashion-mnist)) par du deep Learning
 Autre possibilité : Etude du dataset [CelebA](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html)
  
- ## Abstract
+## Installation
+
+Il faut installer d'abord PyTorch. Toutes les informations sont tirées du [site officiel de PyTorch](https://pytorch.org/get-started/locally/)
+
+### Avec pip
+
+Si CUDA est disponible (regarder sur internet si la GPU a CUDA):
+
+```
+pip install torch===1.4.0 torchvision===0.5.0 -f https://download.pytorch.org/whl/torch_stable.html
+```
+
+Sinon
+
+```
+pip install torch==1.4.0+cpu torchvision==0.5.0+cpu -f https://download.pytorch.org/whl/torch_stable.html
+```
+
+### Verification
+
+Lancer `python` et entrer ces lignes
+
+```
+from __future__ import print_function
+import torch
+x = torch.rand(5, 3)
+print(x)
+```
+
+Pour vérifier que CUDA (gpu) est disponible:
+
+```
+import torch
+torch.cuda.is_available()
+```
+
+## Abstract
 
 Les membres de la communauté des data scientists commencent souvent à apprendre avec le dataset MNIST, composé de chiffres manuscrits, voire l'utilisent comme benchmark pour valider leurs modèles. 
 
